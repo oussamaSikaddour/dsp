@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- <main class="container">
+
+    </main> -->
+  <body>
+
+    <header class="header header--guest">
+      <nav class="nav nav--admin">
+        <div class="nav__addOn">
+          <img class="nav__img" src="./img/algeria.png" alt="algeria" />
+          <h3>République Algérienne Démocratique et Populaire</h3>
+        </div>
+        <ul class="nav__links">
+          <li class="nav__link">
+            <a href="admin.html">dashboard</a>
+          </li>
+          <li class="nav__link">
+            <a href="users.html">users</a>
+          </li>
+          <li class="nav__link">
+            <a href="home.html">Mes Dossiers</a>
+          </li>
+          <li class="nav__link">
+            <a href="http://www.dsp-tlemcen.dz/index.php">D.S.P Tlemcen</a>
+          </li>
+     
+          <li class="nav__link">Username <i class="fa-regular fa-user"></i>
+          <div class="nav__link__drapdown">
+            <ul>
+              <li><a href="monProfil.html">Mon Profile <i class="fa-solid fa-user"></i></a></li>
+              <li><a href="logout.html">Déconnexion <i class="fa-solid fa-right-from-bracket"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav__link"><i class="fa-solid fa-envelope"></i> <span>2255555</span></li>
+          </div>
+        </ul>
+      </nav>
+
+    </header>
+
+    <div class="nav__humb">
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav--mobile">
+
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="http://www.dsp-tlemcen.dz/index.php">D.S.P Tlemcen</a>
+        </li>
+        <li class="nav__link">
+          <a href="admin.html">dashboard</a>
+        </li>
+        <li class="nav__link">
+          <a href="users.html">users</a>
+        </li>
+        <li class="nav__link">
+          <a href="home.html">Mes Dossiers</a>
+        </li>
+        <li class="nav__link">
+          <a href="logout.html">Déconnexion <i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <div class="notifications__container">
+      <ul class="notifications">
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+      </ul>
+    
+    </div>
+    
+    <div class="message__container">
+      <div class="message__header">  <span class="message__close">&times;</span>  Administration </div>
+    <div class="messages">
+    <div class="message">Votre demande de logement social a été examinée par une commission d’attribution.
+    
+      Le refus de la commission peut être motivé par différentes raisons.
+      
+      La demande a pu être déclarée irrecevable car vous ne remplissez pas les conditions fixées par la loi pour accéder à une habitation à loyer modéré. Il y en a deux :
+      
+      être de nationalité française ou admis·e à séjourner régulièrement en France ;
+      avoir des revenus qui ne dépassent pas les plafonds de ressources réglementaires fixés pour l’attribution d’un logement social.
+      <span class="message__date">2023-06-23</span>
+    </div>
+      
+    </div>
+    
+    </div>
+    <button class="button button--primary rounded message__button"><i class="fa-regular fa-message"></i><span>2255555</span></button>
+    <main class="main">
+      <div class="dossier__search">
+      <form class="form" method='POST' onSubmit={handelSearch}>   
+        <div class="form__group select md">
+          <label for="type" class="form__label">Type de Dossier:</label>
+          <div class="selector">
+            <select name="type" onChange={handleChange} value={inputs.type}>
+              <option value="">------ </option> 
+                <option value="installation">Installation d'un cabinet </option>
+                <option value="transfer"> Transfert du Cabinet</option>
+                <option value="closure">Fermeture du Cabinet</option>
+            </select>
+          </div>
+         
+         </div>
+    
+  
+         <div class="form__group select md">
+          <label for="state" class="form__label">etat du dossier :</label>
+          <div class="selector">
+            <select name="state" onChange={handleChange} value={inputs.state}>
+                <option value="">------ </option> 
+                <option value="pending">en cours</option>
+                <option value="validated">valider</option>
+                <option value="approved">approuver</option>
+                <option value="rejected">rejeter</option>
+            </select>
+          </div>
+         </div>
+  <div class="form__group sm">
+    <input
+    type="text"
+    class="form__input"
+    placeholder="Code Dossier"
+    name="code"
+     id="code"
+     onChange={handleChange}
+     value={inputs.code}
+   />
+   <label for="code" class="form__label">Code Dossier</label>
+   </div>
+  <div class="form__group sm">
+    <input
+    type="text"
+    class="form__input"
+    placeholder="Nom"
+    name="last_name"
+     id="last_name"
+     onChange={handleChange}
+     value={inputs.last_name}
+   />
+   <label for="last_name" class="form__label">Nom</label>
+   </div>
+   <div class="form__group sm">
+    <input
+    type="text"
+    class="form__input"
+    placeholder="Prénom"
+    name="first_name"
+     id="first_name"
+     onChange={handleChange}
+     value={inputs.first_name}
+   />
+   <label for="first_name" class="form__label">Prénom</label>
+   </div>
+ 
+   <div class="form__group sm">
+    <input
+    type="date"
+    class="form__input"
+    placeholder="Date Début"
+    name="date_start"
+     id="date_start"
+     onChange={handleChange}
+     value={inputs.date_start}
+   />
+   <label for="date_start" class="form__label">Date Début</label>
+   </div>
+   <div class="form__group sm">
+    <input
+    type="date"
+    class="form__input"
+    placeholder="Date fin"
+    name="date_end"
+     id="date_end"
+     onChange={handleChange}
+     value={inputs.date_end}
+   />
+   <label for="date_end" class="form__label">Date Fin</label>
+   </div>
+   
+        <div class="form__actions">
+          <button class="button button--primary l">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+ 
+    </form>
+  </div>
+      <section class="section withTable">
+        <div class="section__actions"> <a  href="users.html" class="button button--primary openModal" >Ajouter des Amdinstrateurs <i class="fa-solid fa-users"></i></a></div>
+        <h2>Administration des dossier</h2>
+   
+      <div class="tabs__container ">
+        <ul class="tab__links">
+         <li class="tab__link">Dossiers En attente</li>
+         <li class="tab__link">Dossiers validés</li>
+         <li class="tab__link">Dossiers approuvés</li> 
+         <li class="tab__link">Dossiers rejetés</li>
+        </ul>
+        <div class="tabs">
+     
+          <div class="tab ">
+                    <div class="table__container l">
+        <table>
+          <thead>
+            <tr>
+              <th >Code Dossier</th>
+              <th >Date De creation</th>
+              <th >type de dossier</th>
+              <th >Nom</th>
+              <th >Prénom</th>
+              <th >Specialty</th>
+              <th >Daira</th>
+              <th >Commune</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="active">
+              <td >225-siKaddour-255</td>
+              <td >22-02-2022</td>
+              <td>transfer</td>
+              <td>Si kaddour</td>
+              <td >Oussama</td>
+              <td >traumato</td>
+              <td >tlemcen</td>
+              <td >tlemcen</td>
+            </tr>
+            <tr >
+              <td >225-siKaddour-255</td>
+              <td >22-02-2022</td>
+              <td>transfer</td>
+              <td>Si kaddour</td>
+              <td >Oussama</td>
+              <td >traumato</td>
+              <td >tlemcen</td>
+              <td >tlemcen</td>
+            </tr>
+            <tr >
+              <td >225-siKaddour-255</td>
+              <td >22-02-2022</td>
+              <td>transfer</td>
+              <td>Si kaddour</td>
+              <td >Oussama</td>
+              <td >traumato</td>
+              <td >tlemcen</td>
+              <td >tlemcen</td>
+            </tr>
+            <tr >
+              <td >225-siKaddour-255</td>
+              <td >22-02-2022</td>
+              <td>transfer</td>
+              <td>Si kaddour</td>
+              <td >Oussama</td>
+              <td >traumato</td>
+              <td >tlemcen</td>
+              <td >tlemcen</td>
+            </tr>
+
+          </tbody>
+        
+        </table>
+      </div>
+
+          </div>
+          <div class="tab ">
+            <div class="table__container l">
+<table>
+  <thead>
+    <tr>
+      <th >Code Dossier</th>
+      <th >Date De creation</th>
+      <th >type de dossier</th>
+      <th >Nom</th>
+      <th >Prénom</th>
+      <th >Specialty</th>
+      <th >Daira</th>
+      <th >Commune</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td >225-siKaddour-255</td>
+      <td >22-02-2022</td>
+      <td>transfer</td>
+      <td>Si kaddour</td>
+      <td >Oussama</td>
+      <td >traumato</td>
+      <td >tlemcen</td>
+      <td >tlemcen</td>
+    </tr>
+    <tr >
+      <td >225-siKaddour-255</td>
+      <td >22-02-2022</td>
+      <td>transfer</td>
+      <td>Si kaddour</td>
+      <td >Oussama</td>
+      <td >traumato</td>
+      <td >tlemcen</td>
+      <td >tlemcen</td>
+    </tr>
+
+  </tbody>
+
+</table>
+</div>
+
+  </div>
+  <div class="tab ">
+    <div class="table__container l">
+<table>
+<thead>
+<tr>
+<th >Code Dossier</th>
+<th >Date De creation</th>
+<th >type de dossier</th>
+<th >Nom</th>
+<th >Prénom</th>
+<th >Specialty</th>
+<th >Daira</th>
+<th >Commune</th>
+</tr>
+</thead>
+<tbody>
+<tr class="active">
+<td >225-siKaddour-255</td>
+<td >22-02-2022</td>
+<td>transfer</td>
+<td>Si kaddour</td>
+<td >Oussama</td>
+<td >traumato</td>
+<td >tlemcen</td>
+<td >tlemcen</td>
+</tr>
+<tr >
+<td >225-siKaddour-255</td>
+<td >22-02-2022</td>
+<td>transfer</td>
+<td>Si kaddour</td>
+<td >Oussama</td>
+<td >traumato</td>
+<td >tlemcen</td>
+<td >tlemcen</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+<div class="tab ">
+  <div class="table__container l">
+<table>
+<thead>
+<tr>
+<th >Code Dossier</th>
+<th >Date De creation</th>
+<th >type de dossier</th>
+<th >Nom</th>
+<th >Prénom</th>
+<th >Specialty</th>
+<th >Daira</th>
+<th >Commune</th>
+</tr>
+</thead>
+<tbody>
+<tr class="active">
+<td >225-siKaddour-255</td>
+<td >22-02-2022</td>
+<td>transfer</td>
+<td>Si kaddour</td>
+<td >Oussama</td>
+<td >traumato</td>
+<td >tlemcen</td>
+<td >tlemcen</td>
+</tr>
+<tr >
+<td >225-siKaddour-255</td>
+<td >22-02-2022</td>
+<td>transfer</td>
+<td>Si kaddour</td>
+<td >Oussama</td>
+<td >traumato</td>
+<td >tlemcen</td>
+<td >tlemcen</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</div>
+        
+     
+  
+        </div>
+  </div>
+
+      </section>
+ 
+    </main>
+    <footer class="footer">
+      <img src="img/logo.ico" class="footer__img" alt="ouSika" />
+      <p class="text-light">&#169; Si kaddour oussama 2023</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
+

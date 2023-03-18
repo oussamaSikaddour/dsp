@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- <main class="container">
+
+    </main> -->
+  <body>
+    <header class="header header--guest">
+      <nav class="nav nav--admin">
+        <div class="nav__addOn">
+          <img class="nav__img" src="./img/algeria.png" alt="algeria" />
+          <h3>République Algérienne Démocratique et Populaire</h3>
+        </div>
+        <ul class="nav__links">
+          <li class="nav__link">
+            <a href="admin.html">dashboard</a>
+          </li>
+          <li class="nav__link">
+            <a href="users.html">users</a>
+          </li>
+          <li class="nav__link">
+            <a href="home.html">Mes Dossiers</a>
+          </li>
+          <li class="nav__link">
+            <a href="http://www.dsp-tlemcen.dz/index.php">D.S.P Tlemcen</a>
+          </li>
+     
+          <li class="nav__link">Username <i class="fa-regular fa-user"></i>
+          <div class="nav__link__drapdown">
+            <ul>
+              <li><a href="monProfil.html">Mon Profile <i class="fa-solid fa-user"></i></a></li>
+              <li><a href="logout.html">Déconnexion <i class="fa-solid fa-right-from-bracket"></i></a></li>
+            </ul>
+          </li>
+          <li class="nav__link"><i class="fa-solid fa-envelope"></i> <span>2255555</span></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="nav__humb">
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav--mobile">
+
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="http://www.dsp-tlemcen.dz/index.php">D.S.P Tlemcen</a>
+        </li>
+        <li class="nav__link">
+          <a href="admin.html">dashboard</a>
+        </li>
+        <li class="nav__link">
+          <a href="users.html">users</a>
+        </li>
+        <li class="nav__link">
+          <a href="home.html">Mes Dossiers</a>
+        </li>
+        <li class="nav__link">
+          <a href="logout.html">Déconnexion <i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <div class="notifications__container">
+      <ul class="notifications">
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+        <li class="notification"><a href="dossier.html">code dossier <i class="fa-regular fa-folder-open"></i></a> </li>
+        <li class="notification">nouveau message <i class="fa-regular fa-envelope"></i></li>
+      </ul>
+    
+    </div>
+    
+    <div class="message__container">
+      <div class="message__header">  <span class="message__close">&times;</span>  Administration </div>
+    <div class="messages">
+    <div class="message">Votre demande de logement social a été examinée par une commission d’attribution.
+    
+      Le refus de la commission peut être motivé par différentes raisons.
+      
+      La demande a pu être déclarée irrecevable car vous ne remplissez pas les conditions fixées par la loi pour accéder à une habitation à loyer modéré. Il y en a deux :
+      
+      être de nationalité française ou admis·e à séjourner régulièrement en France ;
+      avoir des revenus qui ne dépassent pas les plafonds de ressources réglementaires fixés pour l’attribution d’un logement social.
+      <span class="message__date">2023-06-23</span>
+    </div>
+      
+    </div>
+    
+    </div>
+    <button class="button button--primary rounded message__button"><i class="fa-regular fa-message"></i><span>2255555</span></button>
+    <main class="main">
+      <section class="section withTable">
+        <div class="section__actions"> <button class="button button--primary openModal" >Ajouter un Adminstrateur <i class="fa-solid fa-user"></i></button></div>
+        <h2>Mes Dossier</h2>
+        <div class="table__container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nom D'utlisateur</th>
+              <th>Email</th>
+              <th>roles</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brezklah</td>
+              <td>brezklah@gmail.com</td>
+              <td>user, super Admin</td>
+              <td> <button class="button rounded button--danger"> <i class="fa-solid fa-trash"></i></button>
+               <button class="button rounded button--primary openMangeModel"> <i class="fa-sharp fa-solid fa-link"></i></button></td>
+            </tr>
+            <tr>
+              <td>Brezklah</td>
+              <td>brezklah@gmail.com</td>
+              <td>user, super Admin</td>
+              <td> <button class="button rounded button--danger"> <i class="fa-solid fa-trash"></i></button>
+               <button class="button rounded button--primary openMangeModel"> <i class="fa-sharp fa-solid fa-link"></i></button></td>
+            </tr>
+
+        
+          </tbody>
+        
+        </table>
+      </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <img src="img/logo.ico" class="footer__img" alt="ouSika" />
+      <p class="text-light">&#169; Si kaddour oussama 2023</p>
+    </footer>
+    <div id="myModal" class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="modal__close">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+    
+        <div class="modal__body">
+          <form class="form">
+            <div class="form__content">
+              <div class="form__header">
+                <h2 class="primary">
+                  Veuillez fournir les renseignements suivants :
+                </h2>
+                <p class="large">
+                  Inscrivez son adresse courriel , il lui sera envoyer un
+                  mot de pass de confimation
+                </p>
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  placeholder="email@test.com"
+                  name="email"
+                  id="email"
+                />
+                <label for="email" class="form__label">l'email</label>
+                <i class="form__icon fa-solid fa-envelope fa-2x"></i>
+              </div>
+
+              <div class="form__group">
+                <input
+                  type="password"
+                  class="form__input"
+                  placeholder="Password"
+                  name="password"
+                  id="passwrod"
+                />
+                <label for="password" class="form__label"
+                  >Mot de passe</label
+                >
+                <i class="form__icon fa-solid fa-lock fa-2x"></i>
+              </div>
+              <div class="form__actions center">
+                <button class="button button--primary l next">
+                  M'inscrire
+                </button>
+                <button class="button l">Annuller</button>
+              </div>
+      
+            </div>
+          </form>
+          </div>
+      </div>
+    
+    </div>
+
+    <div id="managesRolesModel" class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="modal__close">&times;</span>
+          <h2>manage Roles</h2>
+        </div>
+        <div class="modal__body">
+          <form class="form">
+          
+              <div class="roles__container">
+                <h3>Roles disponibles</h3>
+                   <div>super admin    <div class="checkboxs">
+                    <input type="checkbox" />
+                  </div></div>
+                  <div>admin    <div class="checkboxs">
+                    <input type="checkbox" />
+                  </div></div>
+                  <div>Approver     <div class="checkboxs">
+                    <input type="checkbox" />
+                  </div></div>
+                 </div>
+       
+              <div class="form__actions center">
+                <button class="button button--primary l next">
+                  M'inscrire
+                </button>
+                <button class="button l">Annuller</button>
+              </div>
+      
+            </div>
+          </form>
+          </div>
+  
+      </div>
+      </div>
+    
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
