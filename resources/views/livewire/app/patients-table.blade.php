@@ -152,7 +152,7 @@
                                     @endif
 
                                 @else
-                                <x-core.button icon="view" variant="info" route="patient_route" :routeParameters="['id' => $patient->id, 'isForServicePersonnel'=>$isForServicePersonnel]"
+                                <x-core.button icon="book" variant="info" route="patient_route" :routeParameters="['id' => $patient->id, 'isForServicePersonnel'=>$isForServicePersonnel]"
                                     rounded hasTooltip :tooltip="__($ui['viewTooltip'])" />
 
                               @endif
