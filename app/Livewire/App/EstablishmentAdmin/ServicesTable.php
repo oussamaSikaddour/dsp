@@ -208,7 +208,7 @@ class ServicesTable extends Component
         if ($property === 'excelFile') {
             $errorsFileData =
                 $this->whenExcelFileUploaded(
-                    'App\servicesImport',
+                    'App\ServicesImport',
                     __('tables.services.excel.upload.success'),
                     [$this->establishmentId]
                 );

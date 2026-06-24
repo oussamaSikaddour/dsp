@@ -80,13 +80,23 @@ class EstablishmentsImport implements ToCollection, WithHeadingRow, WithChunkRea
     /**
      * Remove extra spaces from all string values.
      */
-    private function trimRowValues(array $row): array
-    {
-            return array_map(
-        fn($value) => is_string($value) ? mb_strtolower(trim($value)) : $value,
-        $row
-    );
-    }
+private function trimRowValues(array $row): array
+{
+    return array_map(function ($value) {
+        if (!is_string($value)) {
+            return $value;
+        }
+
+        $value = trim($value);
+
+        // Convert decimal commas to dots
+        if (is_numeric(str_replace(',', '.', $value))) {
+            return str_replace(',', '.', $value);
+        }
+
+        return mb_strtolower($value);
+    }, $row);
+}
 
     /**
      * Build the validator with rules.
