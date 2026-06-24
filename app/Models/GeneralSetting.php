@@ -95,7 +95,7 @@ class GeneralSetting extends Model
         $logo = $this->getRelationValue('logo');
 
         return $logo?->url
-            ?? asset('assets/app/images/Logo.png');
+            ?? asset('assets/app/images/logo.png');
     }
 
     public function getThemeColorClassAttribute(): string
