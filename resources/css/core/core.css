@@ -4089,14 +4089,26 @@ input[type=radio]:checked:disabled + label::before {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: calc(100% - 7rem);
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .table__form__inputs {
+    width: calc(100% - 7rem);
+  }
 }
 .table__form__actions {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  width: 7rem;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .table__form__actions {
+    width: 7rem;
+  }
+}
+.table__form__actions {
   gap: var(--space-2, 0.5rem);
   padding: var(--space-4, 1rem);
   border: 0;
@@ -5505,4 +5517,4 @@ svg {
 .welcome__label {
   font-weight: 600;
   color: var(--clr-neutral-dark);
-}/*# sourceMappingURL=style.css.map */
+}
